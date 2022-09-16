@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //operadores aritmeticos
+        //    var numero1 = Number(window.prompt("INgrese numero 1"));
+        //    var numero2 = Number(window.prompt("INgrese numero 2"));
+        //    document.write("<h1>La suma de numeros es: " + (numero1 + numero2)+"</h1>");
+        //    document.write("<h1>La division de numeros es: " + (numero1 / numero2)+"</h1>");
+        //    document.write("<h1>La multiplicaicon de numeros es: " + (numero1 * numero2)+"</h1>");
+        //    document.write("<h1>La resta de numeros es: " + (numero1 - numero2)+"</h1>");
+    // operadores de comparacion
+        //     var a = 10;
+        //     var b = 20;
+        //    document.write(a == b);
+        //    document.write("<br/>");
+        //    document.write(a > b);
+        //    document.write("<br/>");
+        //    document.write(a < b);
+    // operadores logicos
+    // AND --> &&
+    // OR --> ||
+    // NOT --> !
+        // var a = 1;
+        // var b = 12;
+        // var c = 22;
+        // var d = 4;
+        // document.write( (a<b) && (c < d));
+        //         //        V        F
+        //         document.write("<br/>");
+    /* and
+        v v = V
+        V F = F
+        F V = F
+        F F = F
+    */
+        // document.write( (a<b) || (c < d));
+        //             // V       // F
+        //             document.write("<br/>");
+    /* or
+        v v = V
+        V F = V
+        F V = V
+        F F = F
+    */
+        // document.write( !(a<b) || (c < d));
+        //                 //F       F
+        // document.write("<br/>");
+
+        // OPERADORES DE ASIGNACION
+        //     var  x = 30;
+        //     // x += 5;
+        //     x *= 5;
+        // document.write(x);
+        //OPERADORES CONDICIONALES
+        // (condicion)?  true: false;
+        // var f = 20;
+        // var g = 30;
+        // var resultado = (f < g) ? "Es resulado es verdadero" : "Es resulado es falso";
+        // var res = "";
+        // if (f < g){
+        //     res = "Es resulado es verdadero";
+        // } else {
+        //     res = "Es resulado es falso";
+        // }
+        // document.write("<h1>"+resultado+"</h1>");
+        // document.write("<h1>"+res+"</h1>");
+
+        // TIPOS DE DATOS
+        // LET VAR CONST
+        // CONST = son aquellos que no cambian su valor
+        // VAR = si cambian su valor
+        // LET = puede vivir dentro de un bloque
+        // const a = 23;
+        // // a = 12;
+        // document.write(a);
+        // var b = 12;
+        // b = 56;
+        // document.write(b);
+        // function usoLet() {
+        //     let x = 10;
+        //     document.write(x);
+        //     b = 100;
+        //     document.write(b);
+        // }
+        // usoLet();
+
+        // CONDICIONALES
+        // IF ELSE
+        // var numero = 3;
+        // if  (numero == 70 ){
+        //     document.write("IF");
+        // } else if (numero >= 90 ){
+        //     document.write("else IF");
+        // } else{
+        //     document.write("else");
+        // }
+        // SWITCH
+        // switch(numero){
+        //     case 1: 
+        //         document.write("es 1");
+        //         break;
+        //     case 2: 
+        //         document.write("es 2");
+        //         break;
+        //     case 3: 
+        //         document.write("es 3");
+        //         break;
+        //     default:
+        //         document.write("defecto");
+        //         break;
+        // }
+        // PROBLEMA 1 verificar que un caracter es variable o consonante
+        // var caracter = window.prompt("Ingrese caracter");
+        // switch(caracter){
+        //     case 'A': 
+        //         document.write("ES VOCAL");
+        //         break;
+        //     case 'E': 
+        //         document.write("ES VOCAL");
+        //         break;
+        //     case 'I': 
+        //         document.write("ES VOCAL");
+        //         break;
+        //     case 'O': 
+        //         document.write("ES VOCAL");
+        //         break;
+        //     case 'U': 
+        //         document.write("ES VOCAL");
+        //         break;
+        //     default:
+        //         document.write("ES CONSONANTE");
+        //         break;
+        // }    
+        // BUCLES
+        // for (let i = 10; i >=1 ; i--) {
+        //     document.write(i+ "JS<br/>");
+        // }
+        // FOR IN
+        // var estudiante = {
+        //     nombre: "Andres",
+        //     apellido: "Garcia",
+        //     celular: "791-313-22" 
+        // }
+        // for (var est in estudiante){
+        //     document.write(est);
+        //     document.write(estudiante[est]+"<br/>");
+        // }
+        // document.write("<br/>");
+        // FOR OF
+        // let colores = ["rojo","amarillo","azul","celeste"];
+        // for (var color of colores) {
+        //     document.write(color+"<br/>");
+        // }
+        // WHILE
+        // var n = 10;
+        // while (n >= 1) {
+        //     document.write(n);
+        //     n--;
+        // }
+        // DO WHILE
+        // var a = 10;
+        // do {
+        //     document.write(a);
+        //     a--;
+        // } while(a >= 0);
+        // FUNCION
+        // function test(a, b, c){
+        //     document.write("<h1>"+a+b+c+"</h1>");
+        // }
+        // test(4,3,5);
+        document.write("<br/>");
+        function operacionesAritmeticas(num1, num2) {
+            document.write("<h1>La suma de numeros es: " + (num1 + num2)+"</h1>");
+            document.write("<h1>La division de numeros es: " + (num1 / num2)+"</h1>");
+            document.write("<h1>La multiplicacion de numeros es: " + (num1 * num2)+"</h1>");
+            document.write("<h1>La resta de numeros es: " + (num1 - num2)+"</h1>");
+        }
+        // var  numero1 = Number(window.prompt("Ingrese numero 1"));
+        // var  numero2 = Number(window.prompt("Ingrese numero 2"));
+
+        operacionesAritmeticas(6, 8);
+
+
+    </script>
+</body>
+</html>
