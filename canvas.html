@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas html</title>
+</head>
+<body>
+    <canvas id="micanvas" width="600" height="450">no funciona</canvas>      
+</body>
+</html>
+<script>
+    var c = document.getElementById("micanvas");
+    var ctx = c.getContext("2d");
+    console.log(ctx);
+    // CUADRADOS O RECTANGULOS
+    ctx.fillStyle = "#123456";
+    ctx.fillRect(30, 10, 100, 100);
+
+    ctx.strokeStyle = "red";
+    ctx.strokeRect(25, 5, 110, 110);
+
+    ctx.fillStyle = "#123456";
+    ctx.fillRect(250, 10, 250, 100);
+    
+    //LINEAS
+    ctx.lineWidth = 4; //grosor
+    ctx.moveTo(0,0);
+    ctx.lineTo(300,120);
+    ctx.lineTo(300, 0);
+    ctx.lineTo(0, 120);
+    ctx.stroke(); 
+    
+    // carita feliz
+    ctx.beginPath();
+    ctx.arc(100, 300, 50, 0, 2 * Math.PI);
+    ctx.stroke();
+    // ojos
+    ctx.beginPath();
+    ctx.arc(75, 285, 10, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(115, 285, 10, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.closePath();
+    //boca
+    ctx.beginPath();
+    ctx.moveTo(80,315);
+    ctx.lineTo(110,315);
+    ctx.stroke(); 
+</script>

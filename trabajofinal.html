@@ -104,7 +104,7 @@
             <section>
                 <div class="col-12">
                     <img  width=200 src="https://st.depositphotos.com/1499637/4812/v/600/depositphotos_48129423-stock-illustration-veterinary-with-dog.jpg">
-
+                    <button onclick="venta()" type="button" class="btn btn-success">Venta</button>
                 </div>
             </section>
         </div>
@@ -131,7 +131,7 @@
     <script>
         function guardar(){
             var persona = {
-                id: Math.floor(100000 + Math.random() * 900000),
+                idPersona: Math.floor(100000 + Math.random() * 900000),
                 nombre : document.getElementById('nombre').value,
                 apellido: document.getElementById('apellido').value
             }
@@ -176,6 +176,24 @@
         }
         function actualizar(id){
             
+        }
+        function venta(){
+            var transaccion = db.transaction("persona", "readwrite");
+            const objetoPersona = transaccion.objectStore('persona');
+            var person = objetoPersona.get(218128);
+            person.onsuccess = function (e){
+                console.log(e.target.result);
+                console.log(e.target.result['apellido']);
+            }
+            var venta = {
+                idVenta: Math.floor(100000 + Math.random() * 900000),
+                descripcion : document.getElementById('nombre').value,
+                idPersona: 218128
+            }
+            var transacVenta = db.transaction("venta", "readwrite");
+            const objetoVenta = transacVenta.objectStore('venta');
+            const cargarInfo = objetoVenta.add(venta);
+            console.log("cargar informacion",cargarInfo);
         }
     </script>
 
